@@ -6,4 +6,55 @@
     android:layout_height="match_parent"
     tools:context=".ProfilActivity">
 
+    <TextView
+        android:id="@+id/text"
+        android:layout_width="160dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="80dp"
+        android:text="Welcome:)"
+        android:textAlignment="center"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/name"
+        android:layout_width="300dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="50dp"
+        android:text="name"
+        android:textAlignment="center"
+        android:textSize="20sp"
+        android:textStyle="italic"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.495"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/text" />
+
+    <ImageView
+        android:id="@+id/foto"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_marginTop="10dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/name"
+        android:src="@mipmap/ic_launcher_round"/>
+
+    <Button
+        android:id="@+id/button"
+        android:layout_width="100dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="30dp"
+        android:onClick="handleStart"
+        android:text="Start"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/foto" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>

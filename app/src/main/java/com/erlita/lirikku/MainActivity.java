@@ -69,7 +69,7 @@ public class MainActivity extends AppCompatActivity {
         String name = nameInput.getText().toString();
 
         if(name.equals("")){
-            Toast.makeText(getApplicationContext(), "Enter your name!", Toast.LENGTH_SHORT).show();
+            Toast.makeText(getApplicationContext(), "Input your name!", Toast.LENGTH_SHORT).show();
         }
         else {
             Intent intent = new Intent(this, ProfilActivity.class);
