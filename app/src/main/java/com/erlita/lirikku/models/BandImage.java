@@ -11,6 +11,8 @@ public class BandImage {
         this.linkweb = linkweb;
     }
 
+
+
     public String getLinkweb() {
         return linkweb;
     }

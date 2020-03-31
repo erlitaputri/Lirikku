@@ -19,13 +19,13 @@ public class BandActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_band);
 
-        RecyclerView teamsView = findViewById(R.id.rv_teams);
+        RecyclerView teamsView = findViewById(R.id.rv_bandImage);
 
-        List<BandImage> teams = new ArrayList<>();
-        teams.add(new BandImage("R.drawable.kahitna", "Kahitna"));
-        teams.add(new BandImage("R.drawable.noah", "Noah"));
+        List<BandImage> bandImage= new ArrayList<>();
+        bandImage.add(new BandImage("R.drawable.kahitna", "Kahitna"));
+        bandImage.add(new BandImage("R.drawable.noah", "Noah"));
 
-        BandAdapter adapter = new BandAdapter(this, teams);
+        BandAdapter adapter = new BandAdapter(this, bandImage);
         teamsView.setAdapter(adapter);
 
         RecyclerView.LayoutManager layoutManager = new GridLayoutManager(this,2);
