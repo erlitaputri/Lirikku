@@ -1,34 +1,32 @@
 package com.erlita.lirikku;
 
-import android.os.Bundle;
-
-import androidx.appcompat.app.AppCompatActivity;
-import androidx.recyclerview.widget.GridLayoutManager;
-import androidx.recyclerview.widget.RecyclerView;
-
-import com.erlita.lirikku.adapters.BandAdapter;
 import com.erlita.lirikku.models.BandImage;
 
 import java.util.ArrayList;
-import java.util.List;
 
-public class BandActivity extends AppCompatActivity {
+public class BandActivity{
 
-    @Override
-    protected void onCreate(Bundle savedInstanceState){
-        super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_band);
+    private static String[] bandNames = {
+            "Kahitna",
+            "Noah",
+            "Armada",
+            "Viera"
+    };
+    private static int[] bandImages = {
+            R.drawable.kahitna,
+            R.drawable.noah,
+            R.drawable.armada,
+            R.drawable.viera
+    };
 
-        RecyclerView teamsView = findViewById(R.id.rv_bandImage);
-
-        List<BandImage> bandImage= new ArrayList<>();
-        bandImage.add(new BandImage("R.drawable.kahitna", "Kahitna"));
-        bandImage.add(new BandImage("R.drawable.noah", "Noah"));
-
-        BandAdapter adapter = new BandAdapter(this, bandImage);
-        teamsView.setAdapter(adapter);
-
-        RecyclerView.LayoutManager layoutManager = new GridLayoutManager(this,2);
-        teamsView.setLayoutManager(layoutManager);
+    static ArrayList<BandImage> getListData(){
+        ArrayList<BandImage> list = new ArrayList<>();
+        for (int position = 0; position < bandNames.length; position++){
+            BandImage band = new BandImage();
+            band.setName(bandNames[position]);
+            band.setImage(bandImages[position]);
+            list.add((band));
+        }
+        return  list;
     }
 }

@@ -11,51 +11,53 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.bumptech.glide.Glide;
+import com.bumptech.glide.request.RequestOptions;
 import com.erlita.lirikku.R;
 import com.erlita.lirikku.models.BandImage;
-import com.squareup.picasso.Picasso;
-import com.squareup.picasso.Target;
 
-import java.text.CollationElementIterator;
-import java.util.List;
+import java.util.ArrayList;
 
-public class BandAdapter extends RecyclerView.Adapter<BandAdapter.ViewHolder> {
+public class BandAdapter extends RecyclerView.Adapter<BandAdapter.ListViewHolder> {
 
-    private Context context;
-    private List<BandImage> items;
+    private ArrayList<BandImage> listBand;
 
-    public BandAdapter(Context context, List<BandImage> items){
-        this.context = context;
-        this.items = items;
+    public BandAdapter(ArrayList<BandImage> list){
+        this.listBand = list;
     }
 
     @NonNull
     @Override
-    public BandAdapter.ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
-        View view = LayoutInflater.from(context).inflate(R.layout.item_band, parent, false);
-        return new ViewHolder(view);
+    public ListViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
+        View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.item_band, parent, false);
+        return new ListViewHolder(view);
     }
 
     @Override
-    public void onBindViewHolder(@NonNull BandAdapter.ViewHolder holder, int position) {
-        BandImage item = items.get(position);
-        Picasso.get().load(item.getLogo()).into(holder.logoImage);
-        holder.nameText.setText(item.getName());
+    public void onBindViewHolder(@NonNull ListViewHolder holder, int position) {
+        BandImage band = listBand.get(position);
+        Glide.with(holder.itemView.getContext())
+                .load(band.getImage())
+                .apply(new RequestOptions().override(55, 55))
+                .into(holder.bandImage);
+        holder.bandName.setText(band.getName());
+
     }
 
     @Override
     public int getItemCount() {
-        return (items != null) ? items.size() : 0;
+        return (listBand != null) ? listBand.size() : 0;
     }
 
-    public class ViewHolder extends RecyclerView.ViewHolder {
-        ImageView logoImage;
-        TextView nameText;
 
-        public ViewHolder(@NonNull View itemView) {
+    public class ListViewHolder extends RecyclerView.ViewHolder {
+        ImageView bandImage;
+        TextView bandName;
+
+        public ListViewHolder(@NonNull View itemView) {
             super(itemView);
-            logoImage = itemView.findViewById(R.id.image_logo);
-            nameText = itemView.findViewById(R.id.text_name);
+            bandImage = itemView.findViewById(R.id.rv_bandImage);
+            bandName = itemView.findViewById(R.id.rv_bandName);
         }
     }
 }

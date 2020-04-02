@@ -1,38 +1,20 @@
 package com.erlita.lirikku.models;
 
 public class BandImage {
-    public String logo;
+    public int image;
     public String name;
-    public String linkweb;
 
-    public BandImage(String logo, String name, String linkweb) {
-        this.logo = logo;
-        this.name = name;
-        this.linkweb = linkweb;
-    }
-
-
-
-    public String getLinkweb() {
-        return linkweb;
-    }
-
-    public void setLinkweb(String linkweb) {
-        this.linkweb = linkweb;
-    }
-
-
-    public BandImage(String logo, String name) {
-        this.logo = logo;
+    public BandImage() {
+        this.image = image;
         this.name = name;
     }
 
-    public String getLogo() {
-        return logo;
+    public int getImage() {
+        return image;
     }
 
-    public void setLogo(String logo) {
-        this.logo = logo;
+    public void setImage(int image) {
+        this.image = image;
     }
 
     public String getName() {
