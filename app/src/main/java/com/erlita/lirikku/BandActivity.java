@@ -1,10 +1,22 @@
 package com.erlita.lirikku;
 
+import android.content.Intent;
+import android.os.Bundle;
+import android.view.View;
+
+import androidx.appcompat.app.AppCompatActivity;
+
 import com.erlita.lirikku.models.BandImage;
 
 import java.util.ArrayList;
 
-public class BandActivity{
+public class BandActivity extends AppCompatActivity {
+
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_band);
+    }
 
     private static String[] bandNames = {
             "Kahitna",
@@ -28,5 +40,10 @@ public class BandActivity{
             list.add((band));
         }
         return  list;
+    }
+
+    public void handleJudul(View view) {
+        Intent intent = new Intent(this, JudulActivity.class);
+        startActivity(intent);
     }
 }
