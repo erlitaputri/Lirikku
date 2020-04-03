@@ -46,17 +46,6 @@
         app:layout_constraintTop_toBottomOf="@+id/name"
         android:src="@mipmap/ic_launcher_round"/>
 
-    <Button
-        android:id="@+id/button"
-        android:layout_width="100dp"
-        android:layout_height="50dp"
-        android:layout_marginTop="30dp"
-        android:text="Start"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/foto"
-        android:onClick="handleMulai"
-        />
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>
