@@ -10,15 +10,21 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.erlita.lirikku.JudulActivity;
 import com.erlita.lirikku.R;
+import com.erlita.lirikku.models.BandImage;
 
+import java.util.ArrayList;
 import java.util.List;
 
 public class JudulAdapter extends RecyclerView.Adapter<JudulAdapter.ViewHolder> {
 
     private List<String> judul;
 
-    public JudulAdapter(List<String> judul){
+    public JudulAdapter(List<String> judul)
+    {
         this.judul = judul;
+    }
+
+    public JudulAdapter(ArrayList<BandImage> list) {
     }
 
     @NonNull
