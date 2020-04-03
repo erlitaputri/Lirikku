@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item
+        android:id="@+id/action_band"
+        android:title="Daftar Band"
+        app:showAsAction="never"/>
+    <item
+        android:id="@+id/action_judul"
+        android:title="Judul Lagu"
+        app:showAsAction="never"/>
+    <item
+        android:id="@+id/action_lirik"
+        android:title="Lirik Lagu"
+        app:showAsAction="never"/>
+</menu>
