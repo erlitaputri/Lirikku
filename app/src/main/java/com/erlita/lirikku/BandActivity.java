@@ -26,8 +26,8 @@ public class BandActivity extends AppCompatActivity {
         RecyclerView bandView = findViewById(R.id.rv_bandImage);
 
         List<BandImage> band = new ArrayList<>();
-        band.add(new BandImage("http://www.google.com", "Armada"));
-        band.add(new BandImage("https://upload.wikimedia.org/wikipedia/en/thumb/e/eb/Manchester_City_FC_badge.svg/360px-Manchester_City_FC_badge.svg.png", "Kahitna"));
+        band.add(new BandImage("https://3.bp.blogspot.com/-cfgNsvpNHYA/UPPFPzlVonI/AAAAAAAAArU/Hn1xyigR20o/s1600/ARMADA+3.JPG", "Armada"));
+        band.add(new BandImage("https://www.ywmf.id/storage/galleries/image/thumbnails/13/artist/dsAIg9YOqy1541170436.jpg", "Kahitna"));
 
         BandAdapter adapter = new BandAdapter(this, band);
         bandView.setAdapter(adapter);
