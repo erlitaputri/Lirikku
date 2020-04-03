@@ -12,8 +12,9 @@
         <activity android:name=".LirikActivity"></activity>
         <activity android:name=".JudulActivity" />
         <activity android:name=".ProfilActivity" />
-        <activity android:name=".MainActivity"/>
-        <activity android:name=".BandActivity">
+        <activity android:name=".BandActivity"/>
+        <activity android:name=".MainActivity">
+
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
