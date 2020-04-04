@@ -19,7 +19,7 @@ import com.squareup.picasso.Picasso;
 import java.util.ArrayList;
 import java.util.List;
 
-public class BandAdapter extends RecyclerView.Adapter<BandAdapter.ListViewHolder> {
+public class BandAdapter extends RecyclerView.Adapter<BandAdapter.ViewHolder> {
 
 
     //private ArrayList<BandImage> listBand;
@@ -33,13 +33,13 @@ public class BandAdapter extends RecyclerView.Adapter<BandAdapter.ListViewHolder
 
     @NonNull
     @Override
-    public ListViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
+    public ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
         View view = LayoutInflater.from(context).inflate(R.layout.item_band, parent, false);
-        return new ListViewHolder(view);
+        return new ViewHolder(view);
     }
 
     @Override
-    public void onBindViewHolder(@NonNull ListViewHolder holder, int position) {
+    public void onBindViewHolder(@NonNull ViewHolder holder, int position) {
         BandImage band = items.get(position);
         Picasso.get().load(band.getImage()).into(holder.bandImage);
         holder.bandName.setText(band.getName());
@@ -52,14 +52,14 @@ public class BandAdapter extends RecyclerView.Adapter<BandAdapter.ListViewHolder
     }
 
 
-    public class ListViewHolder extends RecyclerView.ViewHolder {
+    public class ViewHolder extends RecyclerView.ViewHolder {
         ImageView bandImage;
         TextView bandName;
 
-        public ListViewHolder(@NonNull View itemView) {
+        public ViewHolder(@NonNull View itemView) {
             super(itemView);
-            bandImage = itemView.findViewById(R.id.rv_bandImage);
-            bandName = itemView.findViewById(R.id.rv_bandName);
+            bandImage = itemView.findViewById(R.id.band_image);
+            bandName = itemView.findViewById(R.id.band_name);
         }
     }
 }

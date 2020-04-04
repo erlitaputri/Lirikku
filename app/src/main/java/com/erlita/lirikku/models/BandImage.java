@@ -42,15 +42,19 @@ public class BandImage {
     public void setLirik(String lirik) {
         this.lirik = lirik;
     }
+
     public String getJudul() {
         return judul;
     }
+
     public void setJudul(String judul) {
         this.judul = judul;
     }
+
     public String getLinkweb() {
         return linkweb;
     }
+
     public void setLink(String linkweb) {
         this.linkweb = linkweb;
     }

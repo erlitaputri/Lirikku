@@ -18,7 +18,7 @@
         >
 
         <ImageView
-            android:id="@+id/rv_bandImage"
+            android:id="@+id/band_image"
             android:layout_width="0dp"
             android:layout_height="100dp"
             android:layout_margin="8dp"
@@ -28,7 +28,7 @@
             />
 
         <TextView
-            android:id="@+id/rv_bandName"
+            android:id="@+id/band_name"
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_margin="8dp"
