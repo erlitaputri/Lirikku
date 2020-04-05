@@ -6,6 +6,7 @@ public class BandImage {
     public String lirik;
     public String judul;
     public String linkweb;
+    public String band;
 
     public BandImage() {
         this.image = image;
@@ -19,6 +20,13 @@ public class BandImage {
         this.image = image;
         this.name = name;
     }
+
+    public BandImage(String band, String judul, String image){
+        this.band = band;
+        this.judul = judul;
+        this.image = image;
+    }
+
     public String getImage() {
         return image;
     }

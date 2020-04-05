@@ -1,6 +1,5 @@
 package com.erlita.lirikku.adapters;
 
-
 import android.content.Context;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -21,8 +20,6 @@ import java.util.List;
 
 public class BandAdapter extends RecyclerView.Adapter<BandAdapter.ViewHolder> {
 
-
-    //private ArrayList<BandImage> listBand;
     private Context context;
     private List<BandImage> items;
 
