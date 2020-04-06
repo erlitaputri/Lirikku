@@ -3,7 +3,7 @@ package com.erlita.lirikku.models;
 public class BandImage {
     public String image;
     public String name;
-    public String lirik;
+    public int lirik;
     public String judul;
     public String linkweb;
     public String band;
@@ -19,6 +19,11 @@ public class BandImage {
     public BandImage(String image, String name) {
         this.image = image;
         this.name = name;
+    }
+
+    public BandImage(int lirik, String judul) {
+        this.lirik = lirik;
+        this.judul = judul;
     }
 
     public BandImage(String band, String judul, String image){
@@ -43,11 +48,11 @@ public class BandImage {
         this.name = name;
     }
 
-    public String getLirik() {
+    public int getLirik() {
         return lirik;
     }
 
-    public void setLirik(String lirik) {
+    public void setLirik(int lirik) {
         this.lirik = lirik;
     }
 

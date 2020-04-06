@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/bg"
+    android:background="@drawable/bg3"
     tools:context=".MainActivity">
 
     <TextView
@@ -62,7 +62,7 @@
         android:layout_height="100dp"
         android:layout_marginTop="30dp"
         android:onClick="handleFoto"
-        android:src="@mipmap/ic_launcher_round"
+        android:src="@drawable/user2"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
